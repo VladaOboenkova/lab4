@@ -2,9 +2,6 @@ package project;
 
 import java.sql.Connection;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.TimeUnit;
-
 import static java.sql.Connection.*;
 import static project.TransactionThread.TransactionsEnum.*;
 import static project.WriteData.writeData;
@@ -32,7 +29,7 @@ public class TransactionStart {
         try {
             latch1.await();
             latch2.countDown();
-            latch3.await(/**5, TimeUnit.MINUTES*/);
+            latch3.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
