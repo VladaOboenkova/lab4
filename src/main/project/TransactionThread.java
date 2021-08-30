@@ -1,9 +1,7 @@
 package project;
 
 import java.sql.Connection;
-import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.CyclicBarrier;
 
 import static project.Transaction.*;
 
